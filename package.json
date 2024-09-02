@@ -1,0 +1,16 @@
+{
+  "name": "kuad-web-24",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "sass-embedded": "^1.77.8",
+    "tailwindcss": "^3.4.10",
+    "vite": "^5.4.1"
+  }
+}
