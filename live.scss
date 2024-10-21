@@ -1,0 +1,41 @@
+%bgAccentColor {
+  background-color: #145ce1;
+}
+
+body {
+  height: 100vh;
+}
+
+.live__container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border-top: 1px solid white;
+
+  .live__list {
+    border-right: 1px solid white;
+    @extend %bgAccentColor;
+  }
+
+  .live__setlist {
+    display: flex;
+    flex-direction: column;
+    overflow-x: scroll;
+
+    .live__setlist--item {
+      width: 100%;
+      height: 7rem;
+      padding: 2rem;
+      gap: 2rem;
+      border-bottom: 1px solid white;
+
+
+      h1 {
+        font-weight: 500;
+      }
+      span {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+}
