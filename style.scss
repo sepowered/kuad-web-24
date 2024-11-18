@@ -16,6 +16,11 @@
   padding: 1.6rem;
 }
 
+h1 {
+  font-weight: 500;
+  font-size: 2rem;
+}
+
 .nav {
   @extend %paddingMedium;
   display: grid;
@@ -25,6 +30,10 @@
   font-size: 1.4rem;
   grid-column: span 2;
   gap: .4rem;
+  position: fixed;
+  width: 100%;
+  background-color: #000;
+  border-bottom: 1px solid white;
 
   .nav__symbol {
 
@@ -44,6 +53,7 @@
     .nav__item {
       text-decoration: none;
       color: white;
+      font-weight: 500;
 
       &:hover {
         text-decoration: underline;
