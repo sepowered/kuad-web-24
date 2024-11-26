@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/node_modules/scss-reset/reset.css">
+    <link rel="stylesheet" href="/resources/icon.scss">
+    <link rel="stylesheet" href="style.scss">
+    <title>Document</title>
+</head>
+<body>
+<div class="nav">
+    <div class="nav__symbols">
+        <a href="/index.html" class="nav__back">
+            <img src="/resources/arrow_back_24dp_000000_FILL0_wght500_GRAD0_opsz24.svg" alt="back to main icon">
+        </a>
+        <div class="nav__symbol">
+            <div class="ic-mos-black"></div>
+        </div>
+    </div>
+    <div class="nav__items">
+        <div class="nav__item">Discography</div>
+        <div class="nav__item">Live</div>
+        <div class="nav__item">News & Events</div>
+    </div>
+</div>
+<div class="discography__grid">
+    <div class="discography__item">
+        <div class="discography__item--left">
+            <span>2022</span>
+            <h1>SOS</h1>
+        </div>
+        <div class="discography__item--albumart"></div>
+    </div>
+    <div class="discography__item">
+        <div class="discography__item--left">
+            <span>2022</span>
+            <h1>Overture</h1>
+        </div>
+        <div class="discography__item--albumart"></div>
+    </div>
+    <div class="discography__item">
+        <div class="discography__item--left">
+            <span>2022</span>
+            <h1>Highway</h1>
+        </div>
+        <div class="discography__item--albumart"></div>
+    </div>
+    <div class="discography__item">
+        <div class="discography__item--left">
+            <span>2023</span>
+            <h1>Starpeggio</h1>
+        </div>
+        <div class="discography__item--albumart"></div>
+    </div>
+    <div class="discography__item">
+        <div class="discography__item--left">
+            <span>2022</span>
+            <h1>Moonlightspeed</h1>
+        </div>
+        <div class="discography__item--albumart"></div>
+    </div>
+    <div class="discography__item">
+        <div class="discography__item--left">
+            <span>2023</span>
+            <h1>夜を待つよ</h1>
+        </div>
+        <div class="discography__item--albumart"></div>
+    </div>
+    <div class="discography__item">
+        <div class="discography__item--left">
+            <span>2023</span>
+            <h1>Midnight Mission</h1>
+        </div>
+        <div class="discography__item--albumart"></div>
+    </div>
+    <div class="discography__item">
+        <span>LOREM IPSUM.</span>
+    </div>
+</div>
+
+</body>
+
+<!--<script>
+    let streamVideo
+    if(!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia )
+    {
+        alert("카메라 권한을 확인해주세요.")
+    } else {
+        document.getElementById("enableCameraPermission").addEventListener('click',open)
+        // document.getElementById("enableCameraPermission").addEventListener('click',close)
+        open()
+    }
+    function open() {
+        close()
+        navigator.mediaDevices.getUserMedia({video:true}).then(stream => {
+            streamVideo = stream
+            let cameraView = document.getElementById("cameraview");
+            cameraView.srcObject = stream;
+            cameraView.play()
+        })
+    }
+    function close() {
+        if (streamVideo) {
+            let track = streamVideo.getTracks()
+            track[0].stop()
+            streamVideo = null
+        }
+    }
+</script>-->
+</html>

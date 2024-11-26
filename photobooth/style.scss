@@ -17,10 +17,9 @@ body {
   .nav {
     position: absolute;
     display: flex;
-    justify-content: space-between;
+    gap: 5.8rem;
     left: calc(50vw - 12rem);
     bottom: 4rem;
-    display: flex;
     background-color: rgba(255, 255, 255, 0.4);
     width: 24rem;
     height: 10rem;
@@ -92,8 +91,12 @@ body {
     flex-direction: column;
     gap: .4rem;
     font-size: 1.2rem;
-
+    .nav__item {
+      color: #000;
+      text-decoration: none;
+    }
   }
+
 
 }
 

@@ -34,3 +34,8 @@
   @extend %iconBackground;
   background: url("photo_camera_24dp_000000_FILL0_wght500_GRAD0_opsz24.svg");
 }
+
+.ic-arrow-back {
+  @extend %iconBackground;
+  background: url("arrow_back_24dp_000000_FILL0_wght500_GRAD0_opsz24.svg");
+}
