@@ -1,0 +1,27 @@
+%iconBackground {
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.ic-mos-starpeggio {
+  @extend %iconBackground;
+  background: url("mos-starpeggio.svg");
+}
+
+.ic-mos-starpeggio-bg {
+  @extend %iconBackground;
+  background: url("mos-starpeggio-bg.svg");
+}
+
+.ic-mos-white {
+  @extend %iconBackground;
+  background: url("mos_white.svg");
+}
+
+.ic-mos-black {
+  @extend %iconBackground;
+  background: url("mos_black.svg");
+}
