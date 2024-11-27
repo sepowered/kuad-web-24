@@ -1,5 +1,6 @@
 //font
 @import url('https://fonts.cdnfonts.com/css/pp-neue-montreal');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
 
 body {
   //background: #000;
@@ -26,7 +27,7 @@ body {
     padding: 1.6rem;
     border-radius: 1.6rem;
     backdrop-filter: blur(2rem);
-    box-shadow: 0 1rem .8rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1rem 1.4rem rgba(0, 0, 0, 0.1);
 
     .nav__symbols {
       display: flex;
