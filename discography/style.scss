@@ -3,10 +3,16 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-dynamic-subset.min.css");
 
 body {
+  position: relative;
   height: 140vh;
   background-color: #E0E0E0;
   //overflow: hidden;
   font-family: "PP Neue Montreal";
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
 
 
   .discography__grid {
@@ -62,12 +68,48 @@ body {
           }
         }
 
+        .discography__item--albumart {
+          aspect-ratio: 1 / 1;
+          background-size: cover;
+        }
 
       }
 
-      .discography__item--albumart {
-        aspect-ratio: 1 / 1;
-        background-size: cover;
+      input {
+        display: none;
+      }
+
+      label {
+        display: flex;
+        justify-content: space-between;
+        color: black;
+        text-decoration: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+        .discography__item--left {
+          display: flex;
+          flex-direction: column;
+          gap: .6rem;
+          padding: 1.2rem 0 1.2rem 2.4rem;
+
+          span {
+            font-size: 1.2rem;
+          }
+
+          h1 {
+            font-size: 2rem;
+          }
+        }
+
+        .discography__item--albumart {
+          aspect-ratio: 1 / 1;
+          background-size: cover;
+        }
+
       }
 
 
@@ -216,40 +258,109 @@ body {
   }
 }
 
+//modal animation
+@keyframes modalInteraction {
+  0% {
+    transform: translateY(-10rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+//modal layout
 #modal {
-  transition: .2s ease-in-out;
-  position: absolute;
-  width: 50rem;
-  height: 80rem;
-  background-color: #fff;
+  position: fixed;
   //width 수정시 rem값 같이 수정
-  left: calc(50vw - 25rem);
+  left: calc(50vw - 30rem);
   //height 수정시 rem값 같이 수정
-  top: calc(50vh - 25rem);
-  border-radius: 2.4rem;
-  box-shadow: 0 2rem 1.4rem rgba(0, 0, 0, 0.05);
+  //top: calc(50vh - 30rem);
+  top: 8rem;
+  animation: 2s modalInteraction 1s;
+
+  //.modal__close {
+  label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 50%;
+    background-color: #ffffff;
+  }
 
   //font size style
   h1 {
     font-size: 2.4rem;
   }
 
-  .modal__yt {
-    overflow: hidden;
+  .modal__container {
+    //size & position
+    width: 60rem;
+    height: 80rem;
+    background-color: #fff;
+    border-radius: 2.4rem;
+    box-shadow: 0 2rem 1.4rem rgba(0, 0, 0, 0.05);
 
-    iframe {
-      width: 100%;
-      height: 24rem;
-      border-radius: 2.4rem 2.4rem 0 0;
+    .modal__yt {
+      overflow: hidden;
+
+      iframe {
+        width: 100%;
+        height: 24rem;
+        border-radius: 2.4rem 2.4rem 0 0;
+      }
+    }
+
+    .modal__area {
+      display: flex;
+      flex-direction: column;
+      padding: 3.2rem;
+
+      .modal__control {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        span {
+          font-size: 1rem;
+        }
+
+        a {
+          display: flex;
+          gap: .8rem;
+          align-items: center;
+          padding: 1rem;
+          border-radius: 1rem;
+          text-transform: uppercase;
+          color: white;
+          background-color: black;
+          box-shadow: 0 1rem 1.6rem 3px rgba(0, 0, 0, 0.15);
+
+          svg {
+            fill: #fff;
+          }
+
+          &:hover {
+            border: 0;
+            background-color: #35C969;
+            transition: .2s ease-in-out;
+            box-shadow: 0 1rem 2rem 3px rgba(0, 0, 0, 0.15);
+          }
+
+          span {
+            font-weight: 500;
+          }
+        }
+      }
     }
   }
 
-  .modal__area {
-    padding: 3.2rem;
-  }
-
   &:not(:target):not([open]) {
-    display: none;
+    visibility: hidden;
   }
 
 }
