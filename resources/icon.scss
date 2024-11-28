@@ -1,0 +1,41 @@
+//google material icon 사용할 때 -> rounded, no fill, grade 500, 24px.
+//아이콘 감싸는 별도 class div 만들어서 사이즈 지정, 이 파일에서 사이즈 지정 하지 말 것.
+
+%iconBackground {
+  background-repeat: no-repeat;
+  background-position: center left;
+  background-size: contain;
+  width: 100%;
+  height: 100%;
+}
+
+
+.ic-mos-starpeggio {
+  @extend %iconBackground;
+  background: url("mos-starpeggio.svg");
+}
+
+.ic-mos-starpeggio-bg {
+  @extend %iconBackground;
+  background: url("mos-starpeggio-bg.svg");
+}
+
+.ic-mos-white {
+  @extend %iconBackground;
+  background: url("mos_white.svg");
+}
+
+.ic-mos-black {
+  @extend %iconBackground;
+  background: url("mos_black.svg");
+}
+
+.ic-photo-camera {
+  @extend %iconBackground;
+  background: url("photo_camera_24dp_000000_FILL0_wght500_GRAD0_opsz24.svg");
+}
+
+.ic-arrow-back {
+  @extend %iconBackground;
+  background: url("arrow_back_24dp_000000_FILL0_wght500_GRAD0_opsz24.svg");
+}
