@@ -235,12 +235,38 @@ body {
 //modal animation
 @keyframes modalInteraction {
   0% {
-    transform: translateY(-10rem);
+    transform: translateY(-1rem);
+    opacity: 0;
   }
   100% {
     transform: translateY(0);
+    opacity: 1;
   }
 }
+
+//modal visible integration starts
+input[id="item_sos"]:checked ~ .modal .modal__dim,
+input[id="item_highway"]:checked ~ .modal .modal__dim,
+input[id="item_overture"]:checked ~ .modal .modal__dim,
+input[id="item_moonlightspeed"]:checked ~ .modal .modal__dim,
+input[id="item_starpeggio"]:checked ~ .modal .modal__dim,
+input[id="item_waitnight"]:checked ~ .modal .modal__dim,
+input[id="item_midnightmission"]:checked ~ .modal .modal__dim {
+  visibility: visible;
+  opacity: 1;
+}
+input[id="item_sos"]:checked ~ .modal .modal__container,
+input[id="item_highway"]:checked ~ .modal .modal__container,
+input[id="item_overture"]:checked ~ .modal .modal__container,
+input[id="item_moonlightspeed"]:checked ~ .modal .modal__container,
+input[id="item_starpeggio"]:checked ~ .modal .modal__container,
+input[id="item_waitnight"]:checked ~ .modal .modal__container,
+input[id="item_midnightmission"]:checked ~ .modal .modal__container {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+//modal visible integration ends
 
 //modal layout
 .modal {
@@ -253,30 +279,6 @@ body {
   left: 0;
   top: 0;
 
-  //modal visible integration starts
-  input[id="item_sos"]:checked ~ & {
-    visibility: visible;
-  }
-  input[id="item_highway"]:checked ~ & {
-    visibility: visible;
-  }
-  input[id="item_overture"]:checked ~ & {
-    visibility: visible;
-  }
-  input[id="item_moonlightspeed"]:checked ~ & {
-    visibility: visible;
-  }
-  input[id="item_starpeggio"]:checked ~ & {
-    visibility: visible;
-  }
-  input[id="item_waitnight"]:checked ~ & {
-    visibility: visible;
-  }
-  input[id="item_midnightmission"]:checked ~ & {
-    visibility: visible;
-  }
-  //modal visible integration ends
-
   //font size style
   h1 {
     font-size: 2.4rem;
@@ -287,17 +289,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    transition: opacity 0.3s ease;
     //position: absolute;
 
     width: 100vw;
-    height: 100vh;
+    height: 150vh;
     padding: 6rem 0;
     background-color: rgba(0, 0, 0, 0.3);
+    overflow-y: hidden;
 
     .modal__close {
       position: relative;
       top: 2rem;
       right: 6rem;
+      transition: opacity 0.3s ease;
+
       label {
         display: flex;
         justify-content: center;
@@ -307,6 +313,7 @@ body {
         border-radius: 50%;
         background-color: #ffffff;
         box-shadow: 0 1rem 1.4rem rgba(0, 0, 0, 0.2);
+
         &:hover {
           background-color: rgba(255, 255, 255, 0.7);
           transition: .15s ease-in-out;
@@ -320,6 +327,9 @@ body {
       background-color: #fff;
       border-radius: 2.4rem;
       box-shadow: 0 2rem 1.4rem rgba(0, 0, 0, 0.05);
+      transform: translateY(-1rem);
+      opacity: 0;
+      transition: transform 0.3s ease, opacity 0.3s ease;
 
       .modal__yt {
         overflow: hidden;
@@ -378,14 +388,17 @@ body {
         .modal__area--lists {
           display: flex;
           flex-direction: column;
+
           .modal__area--listitem-mv {
             border-radius: 1rem;
             padding: 1.4rem .8rem 1em .8rem;
             gap: .2rem;
+
             &:hover {
               background-color: rgba(0, 0, 0, 0.075);
               transition: .2s ease-in-out;
             }
+
             a {
               display: flex;
               width: fit-content;
@@ -396,25 +409,31 @@ body {
               color: black;
               font-weight: 500;
               padding: .4rem 1.2rem;
+
               &:hover {
                 background-color: rgba(0, 0, 0, 0.2);
               }
             }
+
             .modal__area--listitem-mv_item {
               display: flex;
               font-size: 1.2rem;
               padding-bottom: 1.6rem;
               justify-content: space-between;
+
               .modal__area--listitem_title {
                 display: flex;
                 gap: 1.6rem;
+
                 span:first-child {
                   opacity: .65;
                 }
+
                 span:last-child {
                   font-weight: 500;
                 }
               }
+
               .modal__area--listitem_duration {
                 width: 2rem;
                 opacity: .65;
@@ -428,20 +447,25 @@ body {
             font-size: 1.2rem;
             border-radius: 1rem;
             justify-content: space-between;
+
             &:hover {
               background-color: rgba(0, 0, 0, 0.075);
               transition: .2s ease-in-out;
             }
+
             .modal__area--listitem_title {
               display: flex;
               gap: 1.6rem;
+
               span:first-child {
                 opacity: .65;
               }
+
               span:last-child {
                 font-weight: 500;
               }
             }
+
             .modal__area--listitem_duration {
               width: 2rem;
               opacity: .65;
