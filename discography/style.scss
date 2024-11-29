@@ -247,15 +247,29 @@ body {
   left: 0;
   top: 0;
 
-
+  //modal visible integration starts
+  input[id="item_sos"]:checked ~ & {
+    visibility: visible;
+  }
+  input[id="item_highway"]:checked ~ & {
+    visibility: visible;
+  }
   input[id="item_overture"]:checked ~ & {
     visibility: visible;
   }
-
+  input[id="item_moonlightspeed"]:checked ~ & {
+    visibility: visible;
+  }
   input[id="item_starpeggio"]:checked ~ & {
     visibility: visible;
   }
-
+  input[id="item_waitnight"]:checked ~ & {
+    visibility: visible;
+  }
+  input[id="item_midnightmission"]:checked ~ & {
+    visibility: visible;
+  }
+  //modal visible integration ends
 
   //font size style
   h1 {
@@ -287,6 +301,10 @@ body {
         border-radius: 50%;
         background-color: #ffffff;
         box-shadow: 0 1rem 1.4rem rgba(0, 0, 0, 0.2);
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.7);
+          transition: .15s ease-in-out;
+        }
       }
     }
 
@@ -427,6 +445,4 @@ body {
       }
     }
   }
-
 }
-
