@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#272837" data-ember-extension="1"
+     data-test="smart-link-block" data-test-icon="x" class="social-icon--fill social-icon">
+    <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M13.9 10.2L22.6 0h-1.3l-8 9.3L6.8 0H.5l9.3 13.4L.7 24H2l8.4-9.7 6.7 9.7h6.4l-9.6-13.8zM2.4 1h3.9l15.2 22h-3.9L2.4 1z"></path>
+</svg>

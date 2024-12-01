@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#272837" data-ember-extension="1"
+     data-test="smart-link-block" data-test-icon="youtube" class="social-icon--fill social-icon">
+    <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M4.19 3.5A3.94 3.94 0 00.25 7.44v9.12a3.94 3.94 0 003.94 3.94h15.62a3.94 3.94 0 003.94-3.94V7.44a3.94 3.94 0 00-3.94-3.94H4.19zM1.25 7.44A2.94 2.94 0 014.19 4.5h15.62a2.94 2.94 0 012.94 2.94v9.12a2.94 2.94 0 01-2.94 2.94H4.19a2.94 2.94 0 01-2.94-2.94V7.44zm8.52-.581A.5.5 0 009 7.28v8.66a.5.5 0 00.77.421l6.77-4.33a.5.5 0 000-.842l-6.77-4.33zm5.572 4.751L10 15.027V8.193l5.342 3.417z"></path>
+</svg>
