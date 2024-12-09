@@ -10,7 +10,6 @@ export default defineConfig({
             input: {
                 main: path.resolve(__dirname, 'index.html'),
                 discography: path.resolve(__dirname, 'discography/index.html'),
-                live: path.resolve(__dirname, 'live/index.html'),
                 news: path.resolve(__dirname, 'news/index.html'),
             }
         }
