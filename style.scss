@@ -42,6 +42,7 @@
   }
 }
 
+
 //animation ends
 
 :root {
@@ -121,6 +122,42 @@ body {
       height: 32rem;
       opacity: .05;
       animation: 1s mainObjectInteraction1;
+    }
+  }
+
+  .bg2 {
+    overflow: hidden;
+    height: 100vh;
+    background-color: #191919;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    $svg-height: 32rem;
+    $svg-width: calc(#{$svg-height} * 235.9 / 109.1);
+
+
+    .bg2__items {
+      position: relative;
+      perspective: 500px;
+      transition: transform 0.3s ease;
+
+      img {
+        height: $svg-height;
+        position: relative;
+        top: calc(50% - (#{$svg-height} / 2));
+        left: calc(50% - (#{$svg-width} / 2) - 1rem);
+        z-index: 1;
+        transform: scale(92%);
+      }
+
+      svg {
+        height: $svg-height;
+        position: absolute;
+        top: calc(50% - (#{$svg-height} / 2));
+        left: calc(50% - (#{$svg-width} / 2));
+
+      }
     }
   }
 
@@ -271,6 +308,7 @@ body {
   left: calc(50vw - 12rem);
   bottom: 4rem;
   display: flex;
+  z-index: 10;
   background-color: rgba(255, 255, 255, 0.4);
   width: 24rem;
   height: 10rem;
